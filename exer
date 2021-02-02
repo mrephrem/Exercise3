@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise3</title>
+    <style>
+    
+    </style>
+</head>   
+<body>
+<div class=Q1>
+<h1> Task 1</h1>
+Write a script that gets the current month and prints one of the following responses, depending on whether it's August or not:
+It's August, so it's still holiday.Not August, This is Month-name so i don't have any holidays
+<?php
+echo"<br>";
+$m=date("F");
+
+if($m==8){
+    echo"It's August, so it's still holiday";
+}
+else
+    {
+        echo"Not August,This is " .$m.  " so I don't have any holidays";
+    }
+
+
+?>
+</div>
+<div class="Q2">
+<h1>Task 2</h1>
+Assign color red to a variable name $color and check to print one the following responses using if else statement 
+The color is red. 
+The color is not red.
+<?php
+echo"<br>";
+$color="red";
+if($color=="red"){
+    echo"The color is red";
+}
+else{
+    echo "The color is not red";
+}
+?>
+
+</div>
+<div class="Q3">
+<h1>Task 3 </h1>
+Write a program to grade students based on their total score for a subject. 
+The grading scheme is: Excellent : >80 ;Great >70 & less than 80;Good >60 & less than 70; 
+Pass >50 & less than 60 & Fail < 50.
+<?php
+echo"<br>";
+$gr="Grade";
+$gr=9;
+if($gr>80 && $gr <=100){
+    echo"Excellent, You scored: " .$gr;
+}
+if( $gr >70 && $gr<=80){
+echo"Great,you scored: " .$gr;
+}
+if( $gr >60 && $gr<=70){
+echo"Good,you scored: " .$gr;
+}
+if( $gr >50 && $gr<=60){
+echo"Pass,you scored: " .$gr;
+}
+if($gr<=50)
+{
+    echo"Fail, you scored:  $gr points register for resit.";
+}
+?>
+</div>
+<div class="grading">
+<h1>Task 3 using Form</h1>
+<form action="" method="post">
+            <center>      
+                <table border=0>
+                    <tr>
+                        <td>
+                            Student Name
+                        </td>
+                        <td>
+                            <input type=text name="name">
+                        </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            Grade
+                        </td>
+                        <td>
+                            <input type=text name="grade">
+                        </td>
+                    </tr>
+                    </table>
+                <br>
+                <br>
+                <input type="submit" >
+            </center>    
+                <?php
+if(isset($_POST['submit']))
+{
+    
+}
+    if($_POST['grade']>=0 && $_POST['grade']<=50)
+    echo"<center>You Fail </center>";
+if($_POST['grade']>50 && $_POST['grade']<=60)
+echo"<center>You Pass</center>";
+if($_POST['grade']>60 && $_POST['grade']<=70)
+    echo"<center>Your grade is Good</center>";
+if($_POST['grade']>70 && $_POST['grade']<=80)
+    echo"<center>Your grade is Great</center>";
+if($_POST['grade']>80)
+    echo"<center>You are Excelent</center>";
+echo "<br>";
+
+            ?>
+        </form>
+</div>
+<div class="Q4">
+<h1>Task 4</h1>
+Write a program to get inputs (age and name) from the user and based on their age, 
+decide if he/she is eligible for voting. 
+(18 or more than 18 years is eligible for voting.)
+<br>
+
+<form action="" method="GET" action="">
+            <center>      
+                <table border=0>
+                    <tr>
+                        
+                        <td>
+Name: <input type="text" name="name" value=""> <br>
+                         </td>
+                    </tr>
+                  <tr> 
+                  <td> 
+Age  : <input type="number" name="age" value=""> <br>
+                  </td>
+                  </tr>
+                  </table>
+                  <br>
+                  <br>
+     <input type="submit"> <br>
+             
+</form>
+<?php
+
+echo "Hello ".$_GET['name']; echo" you are ".$_GET['age']; echo" years old <br>"; 
+if($_GET['age']>=18){
+    echo $_GET['name']. " is eligible to vote ";
+}
+else{
+    echo $_GET['name']. " is not eligible to vote this time.<br>";
+}
+?>
+ </center>
+</div>
+<div class="Q5">
+<h1> Task 5 </h1>
+Use a looping statement to construct the following pattern: 
+<br>
+<?php
+for($i=8;$i>=1;$i--)
+ {
+     
+   for($j=1;$j<=$i;$j++)
+    {
+     echo $j." ";
+     
+    }
+       echo " ";
+       
+       echo "<br />";
+     
+  
+} 
+?>
+</div>
+<div class="Q6">
+<h1> Task 6</h1>
+Use While loop to print the following pattern
+<br>
+<?php
+$i=1;
+while($i<=8)
+{
+    $j=1;
+    while($j<=$i)
+    {
+      echo"*&nbsp&nbsp";
+      $j++;     
+    }
+    echo"<br>";
+    $i++;
+}
+?>
+</div>
+<div class="Q7">
+<h1>Task 7</h1>
+Create a GitHub repo and enable GitHub pages for the repo. Upload an HTML file of yours to the repo. 
+You should include in your PHP code the link to the repo and your web page. 
+
+</div>
+</body>
+</html>
